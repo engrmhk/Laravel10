@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
@@ -16,7 +17,7 @@ use App\Models\User;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
+    return view('welcome');
     // $users = DB::table('users')->insert([
     //     'username' => 'waqar',
     //     'email' => 'waqar@gmail.com',
@@ -39,14 +40,12 @@ Route::get('/', function () {
 // $user =DB::table('users')
 // ->where('id',2)
 // ->delete();
-$user = User::find(3);
-$user = $user->username;
+// $user = User::find(3);
+// $user = $user->username;
 
-
-    dd($user);
 });
 //Route::view('/', 'home');
-
+Route::resource('users',UserController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
