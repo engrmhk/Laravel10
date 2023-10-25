@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Welcome to WIKIMady Projects </h1>
-    <a href="https://mudassir.co">Wiki Projects</a>
+    <h1> Welcome to Mady Projects </h1>
+    <a href="https://mudassir.co">Portfolio Projects</a>
 
 </body>
 </html>
